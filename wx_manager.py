@@ -9,7 +9,7 @@ def request_bridge():
 		nonce = request.args.get('nonce', '')
 		echostr = request.args.get('echostr', '')
 		response = manage.check(signature, timestamp, nonce, echostr)
-		return render_template('helloworld.htm', response = response)
+		return response
 		pass
 	elif request.method == 'POST':
 		return 'fatal.'
